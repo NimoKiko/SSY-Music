@@ -1,8 +1,8 @@
 <!--
-  功能：功能描述
+  功能：发现页面
   作者：黄逸凡
   邮箱：973528232@qq.com
-  时间：2024年06月06日 17:05:37
+  时间：2024年06月07日 16:18:19
   版本：v1.0
   修改记录：
   修改内容：
@@ -10,24 +10,19 @@
   修改时间：
 -->
 <template>
-  <div id="tab-item">
-    <slot name="img"></slot>
-
-    <slot name="text"></slot>
-  </div>
+<div>
+  <swiper></swiper>
+</div>
 </template>
 
-<script setup lang="ts" name="tabItem"></script>
+<script setup lang='ts' name='find'>
+import swiper from "../../components/swiper/swiper.vue"
+</script> 
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <!--使用了scoped属性之后，父组件的style样式将不会渗透到子组件中，-->
 <!--然而子组件的根节点元素会同时被设置了scoped的父css样式和设置了scoped的子css样式影响，-->
 <!--这么设计的目的是父组件可以对子组件根元素进行布局。-->
-<style lang="less" scoped>
-#tab-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+<style scoped>
+
 </style>
