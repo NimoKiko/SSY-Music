@@ -5,8 +5,8 @@ import { getBanners, getRecommendSongList } from "@/api/api";
 const useMusicStore = defineStore("music", {
   state: () => {
     return {
-      bannerList: [],
-      recommendList: [],
+      bannerList: [], // 轮播图列表
+      recommendList: [], // 甄选歌单列表
     };
   },
   actions: {
@@ -22,6 +22,8 @@ const useMusicStore = defineStore("music", {
     getRecommendSongList(params: any) {
       getRecommendSongList(params).then((res) => {
         this.recommendList = res.result;
+        // console.log(res);
+        
       });
     },
   },

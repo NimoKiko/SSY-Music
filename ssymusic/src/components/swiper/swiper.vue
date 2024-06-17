@@ -12,7 +12,7 @@
 <template>
   <swiper id="swiper" :slides-per-view="1" :space-between="100">
     <swiper-slide class="swiper-item" v-for="item in bannerList"
-      ><img :src="item.imageUrl" alt=""
+      ><img :src="item.pic" alt=""
     /></swiper-slide>
   </swiper>
 </template>

@@ -7,9 +7,19 @@ enum API {
   GET_RECOMMENDSONGLIST = "/personalized",
 }
 // 获取轮播图
-export const getBanners = (params: any) =>
-  request.get<any, any>(API.GET_BANNERS, params);
+export const getBanners = (params: any) => {
+  return request<any, any>({
+    method: "GET",
+    url: API.GET_BANNERS,
+    params: params,
+  });
+};
 
 // 获取推荐歌单
-export const getRecommendSongList = (params: any) =>
-  request.get<any, any>(API.GET_RECOMMENDSONGLIST, params);
+export const getRecommendSongList = (params: any) => {
+  return request<any, any>({
+    method: "GET",
+    url: API.GET_RECOMMENDSONGLIST,
+    params: params,
+  });
+};
